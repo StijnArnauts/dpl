@@ -122,7 +122,7 @@ module Dpl
 
       def wait_until_deployed
         msgs = []
-        1.upto(20) { return if check_deployment(msgs) }
+        1.upto(150) { return if check_deployment(msgs) }
         error 'Too many failures'
       end
 
